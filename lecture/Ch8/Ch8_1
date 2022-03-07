@@ -1,0 +1,18 @@
+from cs1media import *
+
+pict1 = load_picture("C:/Users/82102/Pictures/izone.jpg")
+pict2 = load_picture("C:/Users/82102/Pictures/wonyeong.jpg")
+pict3 = load_picture("C:/Users/82102/Pictures/honda.jpg")
+
+def paste(canvas, img, x1,y1):
+    w, h = img.size()
+    for y in range(h):
+        for x in range(w):
+            canvas.set(x1+x, y1+y, img.get(x,y))
+
+print("pict1 size %d %d " % pict1.size())
+print("pict2 size %d %d " % pict2.size())
+print("pict3 size %d %d " % pict3.size())
+
+paste(pict1, pict2, 30, 10)
+pict1.show()

@@ -1,0 +1,16 @@
+f = open("C:/Users/82102/Desktop/KAIST_22/CS101/2021/test.txt", "w")
+f.write("Is life always this hard, or is it just when your kid?\n")
+f.close()
+
+currency = open("C:/Users/82102/Desktop/KAIST_22/CS101/2021/rates_data.txt", "rt")
+cur = []
+print(currency)
+
+for line in currency:
+    print(line)
+    a, b = line.split(",")
+    cur.append((a, b))
+
+print(cur)
+
+currency.close()
